@@ -10,7 +10,7 @@ import javax.swing.Timer;
 
 public class Draw extends JPanel implements ActionListener {
 	
-	Timer t = new Timer(100,this);
+	Timer t = new Timer(1000,this);
 	
 	Block[][] blocks = new Block[20][20];
 	

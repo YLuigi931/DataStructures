@@ -1,15 +1,15 @@
 package Helper;
 
 import java.awt.GridLayout;
-
 import javax.swing.JFrame;
 
 public class Frame extends JFrame{
 	
 	public Frame() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Flickering Colors");
-		setSize(400,400);
+		setSize(500,500);
 		setResizable(true);
 		setLocationRelativeTo(null);
 		

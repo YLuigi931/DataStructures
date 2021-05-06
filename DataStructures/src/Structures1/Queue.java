@@ -26,14 +26,10 @@ public class Queue {
 			this.length += 1;
 			
 		}else {
-			for(nodeY first = head; first != null; first = first.next) {
-				if(first.next == null) {
-					nodeY newnodeY = new nodeY(data);
-					first.next = newnodeY;
-					this.length += 1;
-					return;
-				}
-			}
+			nodeY newnodeY = new nodeY(data);
+			newnodeY.next = this.head;
+			this.head = newnodeY;
+			this.length++;
 		}
 	}
 	
@@ -42,8 +38,11 @@ public class Queue {
 			System.out.println("Nothing here");
 			return;
 		}else {
-			head= head.next;
-			this.length -= 1;
+			// there still a bug here
+			for(nodeY first = head; first != null; first = first.next) {
+				if(first.next.next == null)
+					first.next = null;
+			}
 		}
 	}
 	
